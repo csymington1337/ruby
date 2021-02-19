@@ -1,7 +1,7 @@
-def call_me_maybe
-    jam = 2 + 2
-    puts "Def Jam definitely does not make jam."
+def serious_math_time (thing1, thing2)
+    all_the_things = thing1 + thing2
+    puts all_the_things
     $stdout.flush
 end
     
-call_me_maybe
+serious_math_time(5222, 464565)
