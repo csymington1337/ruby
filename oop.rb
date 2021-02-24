@@ -1,90 +1,62 @@
-class Ferret
- 
-	def set_name=(ferret_name)
-		@name = ferret_name
-	end
- 
-	def get_name
-		return @name
-	end
- 
-	def set_owner=(owner_name)
-		@owner_name = owner_name
-	end
- 
-	def get_owner
-		return @owner_name
-	end
- 
-	def squeal
-		return "squeeeeee"
-	end
- 
+class Fav_musicians
+    def set_name=(name)
+        @name = name
+    end
+
+    def get_name
+        return @name
+    end
+
+    def set_best_song=(best_song)
+        @best_song = best_song
+    end
+
+    def get_best_song
+        return @best_song
+    end
 end
- 
-class Chinchilla
- 
-	def set_name=(chinchilla_name)
-		@name = chinchilla_name
-	end
 
-	def get_name
-		return @name
-	end
-
-	def set_owner=(owner_name)
-		@owner_name = owner_name
-	end
+class Rapper < Fav_musicians
  
-	def get_owner
-		return @owner_name
-	end
- 
-	def squeak
-		return "eeeep"
-	end
- 
-end
- 
-class Parrot
- 
-	def set_name=(parrot_name)
-		@name = parrot_name
-	end
- 
-	def get_name
-		return @name
-	end
- 
-	def set_owner=(owner_name)
-		@owner_name = owner_name
-	end
- 
-	def get_owner
-		return @owner_name
-	end
-
-    def tweet
-		return "squawk"
+	def dance
+		return "twerk"
 	end
 end
  
-my_ferret = Ferret.new
-my_ferret.set_name= "Fredo"
-ferret_name = my_ferret.get_name
+class Metalheads < Fav_musicians
  
-my_parrot = Parrot.new
-my_parrot.set_name= "Budgie"
-parrot_name = my_parrot.get_name
+	def dance
+		return "headbang"
+	end
+end
  
-my_chinchilla = Chinchilla.new
-my_chinchilla.set_name= "Dali"
-chinchilla_name = my_chinchilla.get_name
+class Rockers < Fav_musicians
+
+    def dance
+		return "play air guitar"
+	end
+end
  
-puts "#{ferret_name} says #{my_ferret.squeal}, 
-#{parrot_name} says #{my_parrot.tweet}, 
-and #{chinchilla_name} says #{my_chinchilla.squeak}."
+fav_rapper = Rapper.new
+fav_rapper.set_name= "Doja Cat"
+rapper_name = fav_rapper.get_name
+fav_rapper.set_best_song= "Say So"
+rapper_best_song = fav_rapper.get_best_song
  
-puts my_ferret.inspect
-puts my_parrot.inspect
-puts my_chinchilla.inspect
+fav_metalheads = Metalheads.new
+fav_metalheads.set_name= "All That Remains"
+metalheads_name = fav_metalheads.get_name
+fav_metalheads.set_best_song= "Two Weeks"
+metalheads_best_song = fav_metalheads.get_best_song
+ 
+fav_rockers = Rockers.new
+fav_rockers.set_name= "Journey"
+rockers_name = fav_rockers.get_name
+fav_rockers.set_best_song= "Don't Stop Believin'"
+rockers_best_song = fav_rockers.get_best_song
+ 
+puts "I love music! #{rapper_name}'s best song is, IMHO, '#{rapper_best_song}.' My favorite song by #{metalheads_name} is '#{metalheads_best_song},' and who DOESN'T love '#{rockers_best_song}' by #{rockers_name}?! I like the challenge of trying to #{fav_rapper.dance}, #{fav_metalheads.dance} and #{fav_rockers.dance} at the same time."
+ 
+puts fav_rapper.inspect
+puts fav_metalheads.inspect
+puts fav_rockers.inspect
